@@ -1,5 +1,6 @@
 body {
     text-align: center;
+    background-color: rgb(49, 49, 49);
 }
 
 .btn {
@@ -9,7 +10,9 @@ body {
     border-radius: 30%;
     margin: 0.5rem;
 }
-
+.heading{
+    color: palegreen;
+}
 .btn-container {
     display: flex;
     justify-content: center;
@@ -25,4 +28,7 @@ body {
 }
 .red{
     background-color: rgb(255, 29, 29);
+}
+.flash{
+    background-color: white;
 }
