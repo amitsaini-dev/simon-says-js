@@ -10,8 +10,9 @@ document.addEventListener("keydown", function () {
     if (started == false) {
         console.log("Game started");
         started = true;
+        levelUp();
     }
-    levelUp();
+    
 })
 
 function levelUp() {
@@ -54,6 +55,14 @@ function checkSeq(idx) {
         }
     }
     else {
-        h4.innerText = "Game Over! Press any key to start Game Again";
+        h4.innerHTML = `Game Over!<br> <b> Your score was ${level} <br> Press any key to start Game Again`;
+        reset();
     }
+}
+
+function reset(){
+    started=false;
+    gameSeq=[];
+    userSeq=[]
+    level=0;
 }
