@@ -1,5 +1,6 @@
 let h4 = document.querySelector("h4");
-let hScore = document.querySelector("h5");
+let hScore = document.querySelector(".high-score");
+let resetBtn = document.querySelector(".reset");
 let gameSeq = [];
 let userSeq = [];
 let started = false;
@@ -61,7 +62,7 @@ function checkSeq(idx) {
             localStorage.setItem("highScore", highScore);
             hScore.innerHTML = `High Score: ${highScore}`;
         }
-        h4.innerHTML = `Game Over!<br> <b> Your score was ${level} <br> Press any key to start Game Again`;
+        h4.innerHTML = `Game Over!<br>Your score: <b>${level}</b><br>Press any key to restart.`;
         reset();
     }
 }
@@ -71,4 +72,19 @@ function reset() {
     gameSeq = [];
     userSeq = []
     level = 0;
+}
+
+resetBtn.addEventListener("click", function () {
+    localStorage.removeItem("highScore");
+    highScore = 0;
+    hScore.innerHTML = `High Score: ${highScore}`;
+    resetBtnHeading();
+    reset();
+})
+
+function resetBtnHeading() {
+    h4.innerHTML = `High score has been reset!<br>Press any key to start a new game.`;
+    setTimeout(() => {
+        h4.innerHTML = "Press any key to start Simon Says";
+    }, 2000);
 }
