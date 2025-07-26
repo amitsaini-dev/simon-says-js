@@ -10,25 +10,52 @@ body {
     border-radius: 30%;
     margin: 0.5rem;
 }
-.heading{
+
+.heading {
     color: palegreen;
 }
+
 .btn-container {
     display: flex;
     justify-content: center;
 }
-.purple{
+
+.purple {
     background-color: rgb(250, 25, 250);
 }
-.yellow{
+
+.yellow {
     background-color: rgb(250, 250, 2);
 }
-.green{
+
+.green {
     background-color: rgb(28, 247, 28);
 }
-.red{
+
+.red {
     background-color: rgb(255, 29, 29);
 }
-.flash{
+
+.flash {
     background-color: white;
+}
+
+.top-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.top-row h2 {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 0;
+}
+
+.top-row h5 {
+    margin-left: auto;
+    white-space: nowrap;
 }
